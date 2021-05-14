@@ -191,14 +191,14 @@
         methods: {
         
         zoom(url) {
-			this.selectedLogo = url;
+			    this.selectedLogo = url;
         },
         
         getLogoURL(url) {
-			return "/storage/school_logos/" + url;
+			    return "/storage/school_logos/" + url;
         },
         getZoomLogoURL() {
-			return "/storage/school_logos/" + this.selectedLogo;
+			    return "/storage/school_logos/" + this.selectedLogo;
         },
         
 		uploadLogo(e){
@@ -244,7 +244,7 @@
            this.form._method = 'PUT';
         },
         updateSchool(){
-           this.form.post('admin/schools/'+this.form.id, {
+           this.form.put('admin/schools/'+this.form.id, {
 
                // Transform form data to FormData
                transformRequest: [function (data, headers) {

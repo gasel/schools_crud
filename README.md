@@ -1,7 +1,7 @@
 # schools_crud
 Laravel Bootstrap Vuejs CRUD for Schools and Students
 
-Prerequisitos de software que hay que tener instalado:
+Prerequisitos de software que hay que tener instalado:  
 
 Git
 PHP 7
@@ -9,10 +9,12 @@ Nodejs
 Composer 2.0
 MySQL
 
-INSTALACIÓN
+## INSTALACIÓN
 
 Clonamos el repositorio:
+```bash
 git clone https://github.com/gasel/schools_crud.git
+```
 
 Instalar los paquetes necesarios de Laravel que usa el proyecto:
 composer update
@@ -24,12 +26,16 @@ Hay que otorgar permiso de escritura a la carpeta storage.
 
 Editamos el fichero de configuración de Larabel .env, indicando nuestro usuario y password de nuestra base de datos local
 Actualizamos la caché de configutación:
+```bash
 php artisan config:cache
 php artisan route:cache
+```
 
 Creamos un enlace a la carpeta storage con el comando:
 
+```bash
 php artisan storage:link
+```
 
 Para gestionar la base de datos lo podemos hacer con phpMyAdmin, si lo tenemos instalado, o cualquier otro gestor que nos guste, como por ejemplo HeidiSQL
 
@@ -38,30 +44,40 @@ Para gestionar la base de datos lo podemos hacer con phpMyAdmin, si lo tenemos i
 
 Inertamos el registro de usuario administrador, con usuario admin@admin.com y contraseña password, con la sentencia INSERT siguiente:
 
+```SQL
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `role`) VALUES
 (2, 'Admin', 'admin@admin.com', NULL, '$2y$10$3avP.nK7d1AbGsXdocQh3eIDYXsAYRlRAUbji/xnIPDae72CBk7e.', NULL, '2020-09-01 06:49:40', '2020-09-01 06:49:40', 'admin');
+```
 
-También podemos utilizar una copia con datos para la base de datos (situada en la carpeta "database/backup"), generada previamente, para rellenarla con escuelas y alumnos de ejemplo. O ejecutar las seeds nosotros mismos.
+También podemos utilizar una copia con datos para la base de datos (situada en la carpeta "database/backup"), generada previamente, para rellenarla con escuelas y alumnos de ejemplo. O ejecutar las seeds nosotros mismos. En la misma carpeta ("database/backup"), tenemos las imágenes correspondientes a los logos de escuelas generadas automáticamente, que deberemos copiar a la carpeta "storage\app\public", si queremos utilizarlas.
 
 
 Instalar las dependencias de node:
 
+```bash
 npm install
+```
 
 Generar los ficheros comprimidos de frontend:
 
-desarrollo: npm run dev
-producción: npm run prod
+desarrollo: ```bash
+npm run dev
+```
+producción: ```bash
+npm run prod
+```
 
-La aplciación está configurada para usarse en la máquina local (127.0.0.1), en el puerto 8000.
+La aplicación está configurada para usarse en la máquina local (127.0.0.1), en el puerto 8000.
 Como servidor se pueden usar varios, pero por ejemplo en este caso vamos a usar el que lleva Laravel, para lanzarlo lo haremos con el comando desde la raíz del proyecto (por defecto lo sirve en el puerto 8000):
 
+```bash
 php artisan serve
+```
 
 Y para acceder a la aplicación abrimos en nuestro navegador favorito la URL: http://127.0.0.1:8000
 
 
-DESCRIPCIÓN DEL PROYECTO
+## DESCRIPCIÓN DEL PROYECTO
 
 En este proyecto se pretende:
 
@@ -90,11 +106,18 @@ escuelas y los alumnos, con usuario admin@admin.com y contraseña password.
 • Utilizar un diseño Bootstrap para que sea adaptativo
 
 
-IMPLEMENTACIÓN
+## IMPLEMENTACIÓN
 
 Se ha decidido hacer la aplicación en forma de SPA (single page application), haciendo el frontend con Vue y separar el backend mediante el acceso a los datos a través de API, implementada con el paquete JWT. No se ha hecho una gestión avanzada de usuarios con policies y gates, solo hay dos tipos de usuario (user y admin), indicado en el campo 'role' de la tabla 'users'. No se ha implementado la verificación del usuario a través de email.
 
 Se ha utilizado el scaffolding por defecto de Laravel 7 con Vue para la autenticación, para adaptarlo despúes a la aquitectura con API.
+
+
+Principales inconvenientes encontrados durante el desarrollo:
+- Validación de campo dependiente de otro y obligatorio.
+- "Hack" parámetro _method en llamada PUT desde formulario HTML.
+- El componente de calendario siempre devuelve la fecha en formato largo.
+- Al generar la imagen del logo con los seeders, la generación con el paquete faker no funcionaba. Se ha sustituido la funcionalidad con una clase 'helper'.
 
 Posibles mejoras para el futuro:
 

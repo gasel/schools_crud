@@ -1,13 +1,13 @@
-# schools_crud
+# SCHOOLS CRUD
 Laravel Bootstrap Vuejs CRUD for Schools and Students
 
 Prerequisitos de software que hay que tener instalado:  
 
-Git
-PHP 7
-Nodejs
-Composer 2.0
-MySQL
+Git  
+PHP 7  
+Nodejs  
+Composer 2.0  
+MySQL  
 
 ## INSTALACIÓN
 
@@ -37,7 +37,7 @@ Creamos un enlace a la carpeta storage con el comando:
 php artisan storage:link
 ```
 
-Para gestionar la base de datos lo podemos hacer con phpMyAdmin, si lo tenemos instalado, o cualquier otro gestor que nos guste, como por ejemplo HeidiSQL
+Para gestionar la base de datos lo podemos hacer con phpMyAdmin, si lo tenemos instalado, o cualquier otro gestor que nos guste, como por ejemplo HeidiSQL.
 
 - Creamos la base datos en el servidor de MySQL local "schools_crud" con codificación "utf8mb4_unicode_ci".
 - Ejecutamos las migraciones de Laravel con: php artisan migrate
@@ -60,10 +60,12 @@ npm install
 
 Generar los ficheros comprimidos de frontend:
 
-desarrollo: ```bash
+desarrollo:
+```bash
 npm run dev
 ```
-producción: ```bash
+producción:
+```bash
 npm run prod
 ```
 
@@ -81,29 +83,26 @@ Y para acceder a la aplicación abrimos en nuestro navegador favorito la URL: ht
 
 En este proyecto se pretende:
 
-Utilizar Laravel para administrar escuelas y sus alumnos:
-• Una escuela tendrá como mínimo los siguientes campos
-o Nombre (requerido)
-o Dirección (requerido)
-o Logotipo (mínimo 200x200 y como máximo 2MB)
-o Correo electrónico
-o Teléfono
-o Página web
-• Un alumno tendrá como mínimo:
-o Nombre (requerido)
-o Apellidos (requerido)
-o Fecha de nacimiento (requerido)
-o Ciudad
-o Escuela (clave foranea a escuela)
-• Usar las migraciones y los Seeds de Laravel para crear el esquema anterior de modelo
-de datos
-• Usar los Resource Controller de Laravel para crear la funcionalidad CRUD de los
-modelos, creando el menú y los botones necesarios para gestionar cada uno de ellos.
-• Usar la paginación para mostrar las listas de cada uno
-• Guardar los logotipos de las escuelas para que sean públicos.
-• Crear un usuario administrador que pueda entrar a la gestión y pueda administrar las
-escuelas y los alumnos, con usuario admin@admin.com y contraseña password.
-• Utilizar un diseño Bootstrap para que sea adaptativo
+Utilizar Laravel para administrar escuelas y sus alumnos:  
+  • Una escuela tendrá como mínimo los siguientes campos
+    o Nombre (requerido)
+    o Dirección (requerido)
+    o Logotipo (mínimo 200x200 y como máximo 2MB)
+    o Correo electrónico
+    o Teléfono
+    o Página web
+  • Un alumno tendrá como mínimo:
+    o Nombre (requerido)
+    o Apellidos (requerido)
+    o Fecha de nacimiento (requerido)
+    o Ciudad
+    o Escuela (clave foranea a escuela)
+  • Usar las migraciones y los Seeds de Laravel para crear el esquema anterior de modelo de datos
+  • Usar los Resource Controller de Laravel para crear la funcionalidad CRUD de los modelos, creando el menú y los botones necesarios para gestionar cada uno de ellos.
+  • Usar la paginación para mostrar las listas de cada uno
+  • Guardar los logotipos de las escuelas para que sean públicos.
+  • Crear un usuario administrador que pueda entrar a la gestión y pueda administrar las escuelas y los alumnos, con usuario admin@admin.com y contraseña password.
+  • Utilizar un diseño Bootstrap para que sea adaptativo
 
 
 ## IMPLEMENTACIÓN

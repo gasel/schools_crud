@@ -40,7 +40,11 @@ php artisan storage:link
 Para gestionar la base de datos lo podemos hacer con phpMyAdmin, si lo tenemos instalado, o cualquier otro gestor que nos guste, como por ejemplo HeidiSQL.
 
 - Creamos la base datos en el servidor de MySQL local "schools_crud" con codificación "utf8mb4_unicode_ci".
-- Ejecutamos las migraciones de Laravel con: php artisan migrate
+- Ejecutamos las migraciones de Laravel con:
+
+```bash
+php artisan migrate
+```
 
 Inertamos el registro de usuario administrador, con usuario admin@admin.com y contraseña password, con la sentencia INSERT siguiente:
 
@@ -60,11 +64,11 @@ npm install
 
 Generar los ficheros comprimidos de frontend:
 
-desarrollo:
+En desarrollo:
 ```bash
 npm run dev
 ```
-producción:
+En producción:
 ```bash
 npm run prod
 ```
@@ -84,19 +88,19 @@ Y para acceder a la aplicación abrimos en nuestro navegador favorito la URL: ht
 En este proyecto se pretende:
 
 Utilizar Laravel para administrar escuelas y sus alumnos:  
-  - Una escuela tendrá como mínimo los siguientes campos
-    o Nombre (requerido)
-    o Dirección (requerido)
-    o Logotipo (mínimo 200x200 y como máximo 2MB)
-    o Correo electrónico
-    o Teléfono
-    o Página web
+  - Una escuela tendrá como mínimo los siguientes campos:
+    * Nombre (requerido)
+    * Dirección (requerido)
+    * Logotipo (mínimo 200x200 y como máximo 2MB)
+    * Correo electrónico
+    * Teléfono
+    * Página web
   - Un alumno tendrá como mínimo:
-    o Nombre (requerido)
-    o Apellidos (requerido)
-    o Fecha de nacimiento (requerido)
-    o Ciudad
-    o Escuela (clave foranea a escuela)
+    * Nombre (requerido)
+    * Apellidos (requerido)
+    * Fecha de nacimiento (requerido)
+    * Ciudad
+    * Escuela (clave foranea a escuela)
   - Usar las migraciones y los Seeds de Laravel para crear el esquema anterior de modelo de datos
   - Usar los Resource Controller de Laravel para crear la funcionalidad CRUD de los modelos, creando el menú y los botones necesarios para gestionar cada uno de ellos.
   - Usar la paginación para mostrar las listas de cada uno

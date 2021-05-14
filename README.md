@@ -115,7 +115,18 @@ Se ha decidido hacer la aplicación en forma de __SPA__ (Single Page Application
 
 Se ha utilizado el scaffolding por defecto de Laravel 7 con Vue para la autenticación, para adaptarlo despúes a la aquitectura con API.
 
+![Registro](info/img/1_home.png "Registro")
+![Login](info/img/1_home.png "Login")
 ![Pantalla inicial](info/img/1_home.png "Página inicial")
+![Dashboard](info/img/1_home.png "Dashboard")
+![Acerca](info/img/1_home.png "Acerca")
+![Usuarios](info/img/1_home.png "Usuarios")
+![Nueva escuela](info/img/1_home.png "Nueva escuela")
+![Nueva escuela error](info/img/1_home.png "Nueva escuela error")
+![Alumnos](info/img/1_home.png "Alumnos")
+![Nuevo alumno](info/img/1_home.png "Nuevo alumno")
+![Borrar alumno](info/img/1_home.png "Borrar alumno")
+![Alumno borrado](info/img/1_home.png "Alunmno borrado")
 
 Principales inconvenientes encontrados durante el desarrollo:
 - Validación de campo dependiente de otro y obligatorio.

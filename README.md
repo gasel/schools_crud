@@ -111,7 +111,7 @@ Utilizar Laravel para administrar escuelas y sus alumnos:
 
 ## IMPLEMENTACIÓN
 
-Se ha decidido hacer la aplicación en forma de SPA (single page application), haciendo el frontend con Vue y separar el backend mediante el acceso a los datos a través de API, implementada con el paquete JWT. No se ha hecho una gestión avanzada de usuarios con policies y gates, solo hay dos tipos de usuario (user y admin), indicado en el campo 'role' de la tabla 'users'. No se ha implementado la verificación del usuario a través de email.
+Se ha decidido hacer la aplicación en forma de __SPA__ (Single Page Application), haciendo el frontend con Vue y separar el backend mediante el acceso a los datos a través de __API__, implementada con el paquete __JWT__. No se ha hecho una gestión avanzada de usuarios con policies y gates, solo hay dos tipos de usuario (user y admin), indicado en el campo 'role' de la tabla 'users'. No se ha implementado la verificación del usuario a través de email.
 
 Se ha utilizado el scaffolding por defecto de Laravel 7 con Vue para la autenticación, para adaptarlo despúes a la aquitectura con API.
 

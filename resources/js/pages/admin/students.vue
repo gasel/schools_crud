@@ -258,7 +258,7 @@
                 this.form.delete('admin/students/'+id)
                     .then((response)=> {
                             Swal.fire(
-                              'Eliminada!',
+                              'Eliminado!',
                               'Alumno borrado correctamente',
                               'success'
                             )

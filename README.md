@@ -115,7 +115,7 @@ Se ha decidido hacer la aplicación en forma de __SPA__ (Single Page Application
 
 Se ha utilizado el scaffolding por defecto de Laravel 7 con Vue para la autenticación, para adaptarlo despúes a la aquitectura con API.
 
-En el frontend se ha utilizado el paquete [Websanova Vue Auth](https://websanova.com/docs/vue-auth/) para la gestión de autenticación ([gitHub](https://github.com/websanova/vue-auth)), peticiones AJAX con Axios, los toast y notficaciones con Sweetalert2 y una barra de progreso horizontal, al estilo "Youtube", para temporizar las llamadas.
+En el frontend se ha utilizado el paquete [Websanova Vue Auth](https://websanova.com/docs/vue-auth/intro) para la gestión de autenticación ([gitHub](https://github.com/websanova/vue-auth)), peticiones AJAX con Axios, los toast y notficaciones con Sweetalert2 y una barra de progreso horizontal, al estilo "Youtube", para temporizar las llamadas.
 
 ![Registro](info/img/0_1_register.png "Registro")
 ![Login](info/img/0_2_login.png "Login")
